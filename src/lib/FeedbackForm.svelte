@@ -20,13 +20,15 @@
         }
     }
     const handleSelect = (e) => rating = e.detail;
+    
     const handleSubmit = () => {
         if(text.trim().length > min){
-            const newFeedback = {
-                id: Math.random() * 10,
-                text,
-                rating: +rating
-            }
+            const newFeedback = { id: Math.random() * 10, text, rating: +rating};
+
+            FeedbackStore.update((currentFeedback) => {
+                return [newFeedback, ...currentFeedback];
+            });
+
             text = '';
             btnDisabled = true;
         }
