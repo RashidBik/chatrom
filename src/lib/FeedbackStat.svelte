@@ -1,5 +1,5 @@
 <script>
-    import { FeedbackStore } from "../Store";
+    import { FeedbackStore } from "./store";
  
 $: count = $FeedbackStore.length;
 $: average = $FeedbackStore.reduce((a, {rating}) => a + rating, 0) / $FeedbackStore.length;

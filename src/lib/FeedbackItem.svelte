@@ -1,5 +1,5 @@
 <script>
-    import { FeedbackStore } from "../Store";
+    import { FeedbackStore } from "./store";
     import Card from "./Card.svelte";
     export let item ;
     const handleDelete = (itemId) => {

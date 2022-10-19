@@ -1,5 +1,5 @@
 <script>
-    import { FeedbackStore } from "../Store";
+    import { FeedbackStore } from "./store";
     import Button from "./Button.svelte";
     import Card from "./Card.svelte";
     import RatingSelect from "./RatingSelect.svelte";
@@ -24,10 +24,10 @@
     const handleSubmit = () => {
         if(text.trim().length > min){
             const newFeedback = { id: Math.random() * 10, text, rating: +rating};
-
-            FeedbackStore.update((currentFeedback) => {
-                return [newFeedback, ...currentFeedback];
-            });
+            FeedbackStore.update((current) => {
+                return [newFeedback, ...current];
+            }
+            );
 
             text = '';
             btnDisabled = true;
