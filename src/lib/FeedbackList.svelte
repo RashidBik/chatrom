@@ -1,16 +1,11 @@
 <script>
+    import { FeedbackStore } from "src/Store";
     import { fade, scale } from "svelte/transition";
     import FeedbackItem from "./FeedbackItem.svelte";
-
-    export let feedback = [];
-    console.log(feedback);
-    const deletFeedback = () => {
-        console.log('some delete');
-    }
-
+let feedback = [];
 </script>
 <main>
-    {#each feedback as fb (fb.id)}
+    {#each feedback as fb }
     <div in:scale out:fade="{{duration: 500}}">
         <FeedbackItem  item={fb} />
     </div>
