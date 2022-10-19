@@ -39,28 +39,30 @@
 
 <Card>
     <header>
-        <h2>How would rate your service with us?</h2>
-    </header>
-    <RatingSelect on:rating-select={handleSelect}/>
-    <form on:submit|preventDefault={handleSubmit}>
+        <h2>I know the rate and range of my ...</h2>
+        <RatingSelect on:rating-select={handleSelect}/>
+        <form on:submit|preventDefault={handleSubmit}>
+        <h3>I have to do</h3>
         <div>
             <input
-            on:input={handleInput} 
-            type="text" 
-            name="" id=" " 
-            bind:value={text}
-            placeholder="write some feedback">
+                on:input={handleInput} 
+                type="text" 
+                name="" id=" " 
+                bind:value={text}
+                placeholder="I am going to ..."
+            >
         </div>
         <div class="div">
-            {#if message}
+                {#if message}
                 <p>{message}</p>
-            {/if}
+                {/if}
         </div>
         <Button 
-        disabled={btnDisabled} 
-        type="submit"
-        >
-        Send
+            disabled={btnDisabled} 
+            type="submit"
+            >
+            Send
         </Button>
     </form>
+</header>
 </Card>
