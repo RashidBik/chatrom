@@ -26,7 +26,7 @@
 
 }
 .card {
-    background: #ddd;
+    background: #fff;
     margin: 0;
     padding: 2px !important;
     margin: 0 !important;
