@@ -3,20 +3,20 @@ import { writable } from "svelte/store";
 export var FeedbackStore = writable([
     {
         id: 1,
-    rating:'Learn',
+    rating: 1,
       name: 'Rashid',
-      text: 'lets see kkkkkkkwhat happens now and thed'
+      text: 'Learn Svelte Fundamental And SSR In SvelteKit'
     },
     {
         id: 2,
-    rating:'Exercize',
+    rating: 2,
       name: 'bik',
-      text: 'so lets see jjjwhat happens now and thed'
+      text: 'Violon For Thirty Minutes'
     },
     {
         id: 3,
-    rating:'Home Work',
+    rating: 3,
       name: 'foog',
-      text: 'see what happens now and jkdfal afaslthed'
+      text: 'Washing The Dishes'
     }
   ])

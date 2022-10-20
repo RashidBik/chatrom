@@ -12,14 +12,28 @@
     <Card>
         <div class="card">
             <div class="num-display">
-                <p style="padding: 0 5px">{item.rating}</p>  
+                <p style="padding: 0 5px; color:coral">
+                    {#if item.rating === 1}
+                        Learn
+                    {:else if item.rating === 2}
+                        Exercize
+                    {:else if item.rating === 3}
+                        Home Work    
+                    {/if}
+                </p>  
                 <button on:click={()=> handleDelete(item.id)} class="num-display">x</button>
             </div>
-            <p>{item.text}</p>
+            <p class="text">{item.text}</p>
         </div>
     </Card>
 </div>
 <style>
+.text {
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 40px;
+}
 .lists {
     padding: 0 !important;
     margin: 0 !important;

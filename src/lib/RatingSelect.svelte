@@ -14,19 +14,19 @@
             <input type="radio" id="num1" name="rating" value=1 
             on:change={onChange} 
             checked={selected===1} />
-            <label for="num1">1-Learn</label>
+            <label for="num1">Learn</label>
         </span>
         <span>
             <input type="radio" id="num2" name="rating" value=2
             on:change={onChange} 
             checked={selected===2} />
-            <label for="num2">2-Exersize</label>
+            <label for="num2">Exersize</label>
         </span>
         <span>
             <input type="radio" id="num3" name="rating" value=3
             on:change={onChange} 
             checked={selected===3} />
-            <label for="num3">3-Home Work</label>
+            <label for="num3">Home Work</label>
         </span>
     </div>
 </div>
