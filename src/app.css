@@ -66,50 +66,6 @@ button:focus-visible {
   }
 }
 
-.radio-btn {
-  background: rgb(253, 253, 253);
-  padding: 16px;
-  border-radius: 15px;
-  font-size: 20px;
-  color: #333232;
-  font-weight: bold;
-  /* margin: 4px; */
-}
-.radio-btn span{
-  margin: 4px;
-}
-[type=radio] {
-  accent-color: red;
-}
-[type=text] {
-  padding: 5px;
-  width: 80%;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-  background: none;
-}
-header{
-  background: #fca311;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 0;
-}
-[type=submit] {
-  margin: 15px 0 2px 0;
-}
-[type=submit]:hover{
-  box-shadow: 1px 1px 5px rgb(255, 0, 0);
-}
-
-body div main main div div {
-  padding: 5px !important;
-  margin: 0 !important;
-}
-.main-content {
-  display: grid;
-}
-
 @media screen and (min-width: 800px) {
   .main-content {
     padding: 0;
