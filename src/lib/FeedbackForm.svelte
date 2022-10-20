@@ -28,7 +28,6 @@
                 return [newFeedback, ...current];
             }
             );
-
             text = '';
             btnDisabled = true;
         }
@@ -39,7 +38,7 @@
 
 <Card>
     <header>
-        <h2>I know the rate and range of my ...</h2>
+        <h2>tO dO</h2>
         <RatingSelect on:rating-select={handleSelect}/>
         <form on:submit|preventDefault={handleSubmit}>
         <h3>I have to do</h3>
@@ -54,15 +53,22 @@
         </div>
         <div class="div">
                 {#if message}
-                <p>{message}</p>
+                <p class="message">{message}</p>
                 {/if}
         </div>
         <Button 
             disabled={btnDisabled} 
             type="submit"
             >
-            Send
+            Add
         </Button>
     </form>
 </header>
 </Card>
+
+<style>
+    .message {
+        font-size: 10px;
+        color: red;
+    }
+</style>

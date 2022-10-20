@@ -3,10 +3,12 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,18 +17,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
+  padding: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -37,14 +30,9 @@ h1 {
   line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
-}
-
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -60,7 +48,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ffcc00;
 }
 button:focus,
 button:focus-visible {
@@ -70,11 +58,9 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #ee964b;
   }
-  a:hover {
-    color: #747bff;
-  }
+  
   button {
     background-color: #f9f9f9;
   }
@@ -104,13 +90,34 @@ button:focus-visible {
   background: none;
 }
 header{
-  background: rgb(218, 216, 216);
+  background: #fca311;
   padding: 20px;
   border-radius: 20px;
+  margin: 0;
 }
 [type=submit] {
   margin: 15px 0 2px 0;
 }
 [type=submit]:hover{
   box-shadow: 1px 1px 5px rgb(255, 0, 0);
+}
+
+body div main main div div {
+  padding: 5px !important;
+  margin: 0 !important;
+}
+.main-content {
+  display: grid;
+}
+
+@media screen and (min-width: 800px) {
+  .main-content {
+    padding: 0;
+    grid-template-columns: auto auto;
+  }
+  .head-content {
+    height: 100vh;
+    background: #e5e5e5;
+  }
+
 }
