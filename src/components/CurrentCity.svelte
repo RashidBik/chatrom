@@ -1,11 +1,25 @@
 <script>
     import store from '../../store';
-    import Card from './Card.svelte';
+    import ActiveCity from './ActiveCity.svelte';
 
-
+let tabActive;
 </script>
-<div class="px-4 mt-10">
-    {#each $store as val}
-        <Card {val} />            
-    {/each}
+
+{#each $store as val}
+<div class="inline-flex">
+    <div class:active={tabActive === val.id}>
+      <button on:click={()=> tabActive = val.id}>
+        {val.city}
+    </button>
+    </div>
 </div>
+
+
+{/each}
+<ActiveCity currentId={tabActive} />
+
+<style>
+    .active {
+        border: 1px dashed red;
+    }
+</style>
