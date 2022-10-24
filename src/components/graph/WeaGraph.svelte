@@ -2,8 +2,9 @@
 	import { interpolateString as interpolate } from 'd3-interpolate';
 	import { tweened } from 'svelte/motion';
 	import Grid from './Grid.svelte';
-
 	import { eases, types } from './eases.js';
+    import { fly } from 'svelte/transition';
+	
 
 	let current_type = 'In';
 	let current_ease = 'sine';
@@ -35,7 +36,7 @@
 	$: current && runAnimations();
 </script>
 
-<div bind:offsetWidth={width} class="relative flex ">
+<div bind:offsetWidth={width} class="relative flex">
 	<svg viewBox="0 0 1800 1902">
 		<g class="canvas">
 			<Grid x={$time} y={$value}/>

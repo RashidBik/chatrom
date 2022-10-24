@@ -1,6 +1,7 @@
 <script>
     import WeaGraph from "./graph/WeaGraph.svelte";
     import store from "../../store";
+    import { fly } from "svelte/transition";
    export let currentId;
    
 </script>
@@ -8,7 +9,7 @@
 {#each $store as item}
 
 {#if item.id === currentId}
-<div class="bg-slate-50 md:p-4 w-full">
+<div class="bg-slate-50 md:p-4 w-full" transition:fly="{{ x: 400, duration: 100}}" >
     <div class="text-xl font-black">{item.city}</div>
     <div class="grid grid-cols-2 bg-slate-200">
         <div class="text-center pt-10">
