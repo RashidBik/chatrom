@@ -1,7 +1,6 @@
 import * as eases from 'svelte/easing';
 
 const processed_eases = {};
-console.log(eases.sineIn);
 for (const ease in eases) {
 	if (ease === "linear") {
 		processed_eases.linear = eases.linear;

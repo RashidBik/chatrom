@@ -19,11 +19,11 @@
         <div class=""><WeaGraph /></div>
     </div>
     <div class="flex flex-wrap">
-        <div class="box">13%elavation</div>
-        <div class="box">13%wind</div>
-        <div class="box">13%rain</div>
-        <div class="box">13%fog</div>
-        <div class="box">13%sun</div>
+        <div class="box">{item.fell}</div>
+        <div class="box">{item.rain}</div>
+        <div class="box">{item.wind}</div>
+        <div class="box">{item.fog}</div>
+        <div class="box">{item.sun}</div>
     </div>
     <div class="flex bg-slate-300 p-4 ">
         <p class="text-xl font-black ">Today &RightArrow; </p>

@@ -1,15 +1,26 @@
 <script>
+    import { onMount } from "svelte";
+    import { weather } from '../src/components/API/fetchApi'
     import Tab from "./components/Tab.svelte";
     import Footer from "./components/Footer.svelte";
     import Header from "./components/Header.svelte";
     import CurrentCity from "./components/CurrentCity.svelte";
     import AddCity from "./components/AddCity.svelte";
-
+    
     let tabs = ['currentCities','addNewCity' ];
     let activeTab = 'currentCities';
     const toggle = (e) => {
         activeTab = e.detail.tab;
     }
+    
+    let data
+    
+    onMount( async() => {
+       data = await weather();
+    });
+    
+    console.log(data);
+
 </script>
 <div class="">
     <Header />
