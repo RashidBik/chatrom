@@ -1,7 +1,7 @@
 <script>
-	import Eliza from 'elizabot';
+	// import Eliza from 'elizabot';
 	import { beforeUpdate, afterUpdate } from 'svelte';
-
+	let Eliza;
 	let div;
 	let autoscroll;
 
