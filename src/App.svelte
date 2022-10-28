@@ -1,74 +1,32 @@
 <script>
     // import { Pane, Splitpanes } from 'svelte-splitpanes';
     import Eliza from "./components/Eliza.svelte";
+    import NameList from "./components/NameList.svelte";
+    import Profile from "./components/Profile.svelte";
+    import Search from "./components/Search.svelte";
+    import Sort from "./components/Sort.svelte";
     import Voice from "./components/Voice.svelte";
-    const contacts = [
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'},
-        {id: 'A', name: 'Ali'}, 
-    ];
-    let size;
-    const handleResize = (e) => {
-        size = e.clientx;
-    }
+
 </script>
-<main class="container flex bg-slate-600 ">
-    <div class="flex flex-col w-[30%] h-[100vh] resizable-content" on:resize={handleResize} >
-        <header>
+<main class="container flex ">
+    <div class="flex flex-col w-[30%] h-[100vh] resizable-content" >
+        <header class="flex justify-between">
             <a href="#">Groups</a>
             <a href="#">Edits</a>
         </header>
         <main class="flex flex-col " >
-            <div class="">
-                <input type="search" placeholder="search" class="bg-gray-200">
-            </div>
+            <Search/>
             <div class="flex">
-                <div class="flex flex-col">
-                {#each contacts as i}
-                        <div class="border">{i.id}</div>
-                {/each}
-                </div>
-                <div>
-                    {#each contacts as v }
-                        <div class="flex">
-                            <div class="p-3 border rounded-full w-10 h-10"></div>
-                            <p>{v.name}</p>
-                        </div>
-                    {/each}
-                </div>
+                <Sort />
+                <NameList />
             </div>
         </main>
     </div>
-    <div class=" flex flex-col w-[100vw] " >
-        <header>
+    <div class=" flex flex-col w-[100vw] border-x" >
+        <header class="flex justify-end">
             <a href="">More</a>
         </header>
-        <main>
-            <div>
-                <img src="img.png" alt="profile-pic">
-            </div>
-            <div>videoCall voiceCall </div>
-            <div class="bg-green-700">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-        </main>
+        <Profile />
     </div>
 </main>
 
@@ -99,7 +57,9 @@ class="default-theme" style="height: 400px">
     overflow-y: auto;
 }
   header {
-    background: #ddd;
+    background: rgb(199, 107, 3);
+    padding: 10px;
+    
   }
 
   /* The following classes can be used to style the splitter, see demos*/
