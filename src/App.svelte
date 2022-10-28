@@ -1,11 +1,13 @@
 <script>
-    // import { Pane, Splitpanes } from 'svelte-splitpanes';
+    import { Pane, Splitpanes } from 'svelte-splitpanes';
     import Eliza from "./components/Eliza.svelte";
     import NameList from "./components/NameList.svelte";
     import Profile from "./components/Profile.svelte";
     import Search from "./components/Search.svelte";
     import Sort from "./components/Sort.svelte";
     import Voice from "./components/Voice.svelte";
+    import {people} from '../store';
+
 
 </script>
 <main class="container flex ">
